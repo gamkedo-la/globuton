@@ -22,7 +22,8 @@ public class MouseOnObject : MonoBehaviour {
 	}
 
 	public void OnMouseDown(){
-		Debug.Log ("Down");
+		
+		Debug.Log ("You clicked on me!");
 	}
 
 	public void OnMouseUp(){

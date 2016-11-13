@@ -42,13 +42,13 @@ public class ClickToMove : MonoBehaviour {
 					navMeshAgent.destination = hit.point;
 				}*/
 
-		if (Input.GetMouseButtonUp(0))
+		if (Input.GetMouseButtonDown(0))
 		{
 			if (Physics.Raycast (ray, out hit, 100, clickMask))
 
 				if (hit.collider.CompareTag ("Object")) 
 				{
-					mouseOverObject.OnMouseUp();
+					mouseOverObject.OnMouseDown();
 				}
 
 				else
