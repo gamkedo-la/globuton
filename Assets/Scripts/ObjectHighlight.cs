@@ -2,37 +2,16 @@
 using System.Collections;
 
 public class ObjectHighlight : MonoBehaviour {
-
 	public string objectName;
-
 	private Color startColor;
-	private bool displayObjectName = false;
 
-	void OnGUI() {
-
-		DisplayName();
-	
+	public void mouseHoverTint() {
+		Renderer rend = GetComponent<Renderer>();
+		startColor = rend.material.color;
+		rend.material.color = Color.white;
 	}
 
-	void OnMouseEnter() {
-		startColor = GetComponent<Renderer>().material.color;
-		GetComponent<Renderer>().material.color = Color.white;
-		displayObjectName = true;
-		Debug.Log ("Mouse Over " + name);
-	}
-
-	void OnMouseExit(){
-	
+	public void mouseHoverRemoveTint(){
 		GetComponent<Renderer>().material.color = startColor;
-		displayObjectName = false;
 	}
-
-	public void DisplayName(){
-	
-		if (displayObjectName) {
-		
-			GUI.Box (new Rect (Event.current.mousePosition.x -155, Event.current.mousePosition.y, 150, 25), objectName);
-		}
-	}
-
 }
