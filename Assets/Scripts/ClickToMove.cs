@@ -13,6 +13,7 @@ public class ClickToMove : MonoBehaviour {
 	{
 		clickMask = ~LayerMask.GetMask ("Camera Trigger");
 		navMeshAgent = GetComponent<NavMeshAgent>();
+
 	}
 
 	void OnGUI() {
@@ -28,11 +29,14 @@ public class ClickToMove : MonoBehaviour {
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
+			if (Physics.Raycast (ray, out hit, 100, clickMask)) {	
+				if(Input.GetMouseButtonUp(0)){
+					if (hit.collider.tag == "Object") {
+					Debug.Log (hit.collider.name);
+				} else {
+					navMeshAgent.SetDestination(hit.point);
+				} 
 
-		if(Physics.Raycast(ray, out hit, 100, clickMask)) {	
-			if(Input.GetMouseButtonUp(0)) {
-				navMeshAgent.SetDestination(hit.point);
-			} else {
 				ObjectHighlight ohNow = hit.collider.GetComponent<ObjectHighlight>();
 				if(ohNow != mousedOverCurrently) {
 					if(mousedOverCurrently != null) {
@@ -44,8 +48,9 @@ public class ClickToMove : MonoBehaviour {
 					if(mousedOverCurrently != null) {
 						mousedOverCurrently.mouseHoverTint();
 					}
-				}
+				} 
 			}
 		}
 	}
 }
+	
