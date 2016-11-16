@@ -30,12 +30,13 @@ public class ClickToMove : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
 			if (Physics.Raycast (ray, out hit, 100, clickMask)) {	
-				if(Input.GetMouseButtonUp(0)){
+				if (Input.GetMouseButtonUp (0)) {
 					if (hit.collider.tag == "Object") {
-					Debug.Log (hit.collider.name);
-				} else {
-					navMeshAgent.SetDestination(hit.point);
-				} 
+						Debug.Log (hit.collider.name);
+					} else {
+						navMeshAgent.SetDestination (hit.point);
+					} 
+				} // end GetMouseButtonUp
 
 				ObjectHighlight ohNow = hit.collider.GetComponent<ObjectHighlight>();
 				if(ohNow != mousedOverCurrently) {
@@ -48,9 +49,9 @@ public class ClickToMove : MonoBehaviour {
 					if(mousedOverCurrently != null) {
 						mousedOverCurrently.mouseHoverTint();
 					}
-				} 
-			}
-		}
-	}
-}
+				} // end ohNow != mousedOverCurrently 
+			} // end Pyhsics.Raycast check
+		}// end Update
+	} // end of file
+
 	
