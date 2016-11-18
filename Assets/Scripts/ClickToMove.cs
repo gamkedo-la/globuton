@@ -7,13 +7,12 @@ public class ClickToMove : MonoBehaviour {
 	private NavMeshAgent navMeshAgent;
 	private int clickMask;
 	private ObjectHighlight mousedOverCurrently = null;
+    private DialogueText objectClickedOn = null;
 
     // Use this for initialization
-    void Start () 
-	{
+    void Start () {
 		clickMask = ~LayerMask.GetMask ("Camera Trigger");
-		navMeshAgent = GetComponent<NavMeshAgent>();
-        string dialogueText = "Test";
+		navMeshAgent = GetComponent<NavMeshAgent>();       
 
     }
 
@@ -22,6 +21,7 @@ public class ClickToMove : MonoBehaviour {
 			GUI.Box(new Rect(Event.current.mousePosition.x - 155, Event.current.mousePosition.y, 150, 25),
 				mousedOverCurrently.objectName);
 		}
+        
 	}
 
 	// Update is called once per frame
@@ -29,13 +29,17 @@ public class ClickToMove : MonoBehaviour {
 	{
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-        string dialogueText = "Test";
+        
 
 			if (Physics.Raycast (ray, out hit, 100, clickMask)) {	
 				if (Input.GetMouseButtonUp (0)) {
 					if (hit.collider.tag == "Object") {
-                    GUI.TextField(new Rect(navMeshAgent.transform.position.x -155, navMeshAgent.transform.position.y + 155, 150, 25), dialogueText);
-						//Debug.Log (hit.collider.name);
+
+                    DialogueText clickedOn = hit.collider.GetComponent<DialogueText>();
+                    if (clickedOn != null)
+                        objectClickedOn.textDisplay();
+
+                    //Debug.Log("You clicked on it");
 					} else {
 						navMeshAgent.SetDestination (hit.point);
 					} 
