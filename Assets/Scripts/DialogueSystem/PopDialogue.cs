@@ -30,6 +30,8 @@ public class PopDialogue : MonoBehaviour {
     public Text bodyText;
     //private Text headerText;   //will there be headers in the dialogue, such as the name of who is talking? or who the dialogue belongs to?
 
+    bool hasStarted = false;
+
     public void PullNarrativePages(NarrativeStorage roomNarrative)
     {
         displayPages = new StoryChapter();
@@ -115,12 +117,16 @@ public class PopDialogue : MonoBehaviour {
             //load the text from the story manager
             PullNarrativePages(sceneStorage);
         }
-        if (autoStart)
-            Begin();
-        else if(interactData != null && interactData.watchDialogue != null)
+        
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    void Awake()
+    {
+        if (!autoStart && interactData != null && interactData.watchDialogue != null)
         {
             //there is a dialogue here, based on the watchInteract do something
-            switch(interactData.watchInteract)
+            switch (interactData.watchInteract)
             {
                 case InteractType.ENTER:
                     interactData.watchDialogue.Dialogue_Enter += Begin;
@@ -138,23 +144,18 @@ public class PopDialogue : MonoBehaviour {
                     Debug.Log("Invalid InteractType chosen for watchInteract variable.");
                     break;
             }
-
-            transform.GetChild(0).gameObject.SetActive(false);
-        }
-        else
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (autoStart && !hasStarted)
+            Begin();
+    }
 
     public void Begin()
     {
-
+        hasStarted = true;
         StartReading();
         //start the displayTimer
         transform.GetChild(0).gameObject.SetActive(true);
@@ -183,6 +184,7 @@ public class PopDialogue : MonoBehaviour {
     
     IEnumerator WaitToBegin()
     {
+        //Debug.Log("Waiting to begin");
         yield return new WaitForSeconds(interactData.delayedInteract);
         Begin();
     }

@@ -20,7 +20,7 @@ public class NarrativeStorage : MonoBehaviour {
 
     public void Initialize()
     {
-        Debug.Log("Start narrative");
+        //Debug.Log("Start narrative");
         allNarratives = new List<StoryBook>();
         BuildNarratives();
     }
@@ -52,6 +52,31 @@ public class NarrativeStorage : MonoBehaviour {
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
+        BuildNarrative_OrphanageScene();
+    }
+
+    void BuildNarrative_OrphanageScene()
+    {
+        StoryBook nextBook = new StoryBook("Orphanage Scene");
+        {
+            //Snoring Cubie conversation
+            {
+                StoryChapter nextChapter = NewChapter(3); //Snoring Cubie
+                {
+                    nextChapter.pages.Add(NewPage("zzzzzZZZZZ... ", 2.0f));
+                    nextChapter.pages.Add(NewPage("Stay away..... no... salad", 2.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(4); //Boxii response
+                {
+                    nextChapter.pages.Add(NewPage("He must be dreaming about dinner earlier.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+        }
+        //add the book to the narrative
+        allNarratives.Add(nextBook);
     }
 
     StoryChapter NewChapter(int dialogueID)
@@ -68,20 +93,20 @@ public class NarrativeStorage : MonoBehaviour {
     {
         if (allNarratives != null)
         {
-            Debug.Log("narrative not null");
+            //Debug.Log("narrative not null");
             for (int i = 0; i < allNarratives.Count; i++)
             {
-                Debug.Log("nextBook");
+                //Debug.Log("nextBook");
                 StoryBook nextBook = allNarratives[i];
                 if (nextBook != null)
                 {
-                    Debug.Log("nextBook not null");
+                    //Debug.Log("nextBook not null");
                     for (int x = 0; x < nextBook.chapters.Count; x++)
                     {
-                        Debug.Log("chapters");
+                       // Debug.Log("chapters");
                         if (prDialogueID == nextBook.chapters[x].dialogueID)
                         {
-                            Debug.Log("chapter found: " + prDialogueID.ToString());
+                           // Debug.Log("chapter found: " + prDialogueID.ToString());
                             return nextBook.chapters[x];
                         }
                     }

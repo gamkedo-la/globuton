@@ -39,6 +39,15 @@ public class ClickToMove : MonoBehaviour {
 					Destroy (goScript.gameObject);
 				} else if (hit.collider.tag == "Object") {
 					Debug.Log("You clicked on it");
+
+                    //Object is clicked, check if it has a dialogue spawner, if so, call it's OnClick
+                    DialogueSpawner showNarrative = hit.collider.GetComponent<DialogueSpawner>();
+                    if(showNarrative != null)
+                    {
+                        //has a dialogue spawner
+                        showNarrative.OnClick();
+                    }
+
 				} else {
 					navMeshAgent.SetDestination (hit.point);
 				} 
