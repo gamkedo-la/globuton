@@ -28,10 +28,7 @@ public class DialogueSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetKeyDown(KeyCode.F))
-        {
-            OnClick();
-        }
+
 	}
 
     public void OnClick()
