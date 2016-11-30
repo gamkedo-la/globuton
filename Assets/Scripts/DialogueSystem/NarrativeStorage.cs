@@ -61,19 +61,36 @@ public class NarrativeStorage : MonoBehaviour {
         {
             //Snoring Cubie conversation
             {
-                StoryChapter nextChapter = NewChapter(3); //Snoring Cubie
+                StoryChapter nextChapter = NewChapter(100); //Snoring Cubie
                 {
                     nextChapter.pages.Add(NewPage("zzzzzZZZZZ... ", 2.0f));
-                    nextChapter.pages.Add(NewPage("Stay away..... no... salad", 2.0f));
+                    nextChapter.pages.Add(NewPage("Stay away... no... salad", 2.0f));
+					nextChapter.pages.Add(NewPage("Can't help it... allergic...", 2.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
-                nextChapter = NewChapter(4); //Boxii response
+				nextChapter = NewChapter(101); //Boxii response
                 {
                     nextChapter.pages.Add(NewPage("He must be dreaming about dinner earlier.", 3.0f));
+					//nextChapter.pages.Add(NewPage("Maybe not.", 2.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
+
+			//Crying Cubie conversation
+			{
+				StoryChapter nextChapter = NewChapter(200); //Crying Cubie
+				{
+					nextChapter.pages.Add(NewPage("Boo hoo. Boo hoo hoo.", 3.0f));
+				}
+				nextBook.chapters.Add(nextChapter);
+
+				nextChapter = NewChapter(201); //Boxii response
+				{
+					nextChapter.pages.Add(NewPage("What's the matter?", 3.0f));
+				}
+				nextBook.chapters.Add(nextChapter);
+			}
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
