@@ -41,6 +41,11 @@ public class DialogueSpawner : MonoBehaviour {
     {
         if (canSpawn)
         {
+            if(parent == null)
+            {
+                GameObject parentObject = GameObject.FindGameObjectWithTag("DialogueParentObject");
+                parent = parentObject.GetComponent<RectTransform>();
+            }
             for (int i = 0; i < dialogueChain.Count; i++)
             {
                 GameObject nextDialogue = Instantiate(dialogueChain[i]) as GameObject;

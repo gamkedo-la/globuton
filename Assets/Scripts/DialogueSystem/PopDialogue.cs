@@ -10,7 +10,7 @@ public class PopDialogue : MonoBehaviour {
     public event DialogueInteractionHandler Dialogue_Enter;
     public event DialogueInteractionHandler Dialogue_Exit;
 
-    private StoryChapter displayPages;
+    protected StoryChapter displayPages;
     
     public DialogueInteract interactData;
 
@@ -30,7 +30,7 @@ public class PopDialogue : MonoBehaviour {
     public Text bodyText;
     //private Text headerText;   //will there be headers in the dialogue, such as the name of who is talking? or who the dialogue belongs to?
 
-    bool hasStarted = false;
+    protected bool hasStarted = false;
 
     public void PullNarrativePages(NarrativeStorage roomNarrative)
     {
@@ -71,15 +71,13 @@ public class PopDialogue : MonoBehaviour {
         }
     }
 
-    public void SyncByInspector()
+    public virtual void SyncByInspector()
     {
         StoryPage nextPage = displayPages.GetCurrentPage();
         if (nextPage != null)
         {
             //Debug.Log("Update with page");
             UpdateBodyText(nextPage.text);
-            
-            
         }
     }
 
@@ -105,7 +103,8 @@ public class PopDialogue : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    protected virtual void Start () {
+
         if (displayPages == null)
             displayPages = new StoryChapter();
         if (linkNarrative && dialogueID != -1)
@@ -119,10 +118,14 @@ public class PopDialogue : MonoBehaviour {
         }
         
         transform.GetChild(0).gameObject.SetActive(false);
+        Debug.Log("start");
     }
 
-    void Awake()
+    
+
+    protected virtual void Awake()
     {
+        Debug.Log("Awake");
         if (!autoStart && interactData != null && interactData.watchDialogue != null)
         {
             //there is a dialogue here, based on the watchInteract do something
@@ -146,14 +149,14 @@ public class PopDialogue : MonoBehaviour {
             }
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    protected virtual void Update () {
         if (autoStart && !hasStarted)
             Begin();
     }
 
-    public void Begin()
+    public virtual void Begin()
     {
         hasStarted = true;
         StartReading();
@@ -189,7 +192,7 @@ public class PopDialogue : MonoBehaviour {
         Begin();
     }
 
-    void OnDialogue_Enter()
+    protected virtual void OnDialogue_Enter()
     {
         //This dialogue is closing,
         if (Dialogue_Enter != null)
@@ -198,7 +201,7 @@ public class PopDialogue : MonoBehaviour {
         }
     }
 
-    void OnDialogue_Exit()
+    protected virtual void OnDialogue_Exit()
     {
         //This dialogue is closing,
         if (Dialogue_Exit != null)
