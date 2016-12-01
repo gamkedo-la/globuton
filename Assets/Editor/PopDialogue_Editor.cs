@@ -6,19 +6,31 @@ using DialogueHelpers;
 [CustomEditor(typeof(PopDialogue))]
 public class PopDialogue_Editor : Editor
 {
-    PopDialogue myTarget;
-    SerializedObject GetTarget;
-    SerializedProperty DisplayTimeTarget;
-    SerializedProperty AutoStartTarget;
-    SerializedProperty InteractTarget;
-    SerializedProperty LinkTarget;
-    SerializedProperty TextTarget;
-    SerializedProperty DialogueIDTarget;
+
+    protected SerializedObject GetTarget;
+    protected SerializedProperty DisplayTimeTarget;
+    protected SerializedProperty AutoStartTarget;
+    protected SerializedProperty InteractTarget;
+    protected SerializedProperty LinkTarget;
+    protected SerializedProperty TextTarget;
+    protected SerializedProperty DialogueIDTarget;
+
+    protected bool showDisplayTimer;
 
     void OnEnable()
     {
-        myTarget = (PopDialogue)target;
-        GetTarget = new SerializedObject(myTarget);
+        InitSerialized(); 
+    }
+
+    protected virtual void SetMyTarget()
+    {
+        GetTarget = new SerializedObject((PopDialogue)target);
+    }
+
+    protected virtual void InitSerialized()
+    {
+        showDisplayTimer = true;
+        SetMyTarget();
         DisplayTimeTarget = GetTarget.FindProperty("displayTime");
         AutoStartTarget = GetTarget.FindProperty("autoStart");
         InteractTarget = GetTarget.FindProperty("interactData");
@@ -29,20 +41,22 @@ public class PopDialogue_Editor : Editor
 
     public override void OnInspectorGUI()
     {
-
-        EditorGUILayout.PropertyField(DisplayTimeTarget);
+        if(showDisplayTimer)
+            EditorGUILayout.PropertyField(DisplayTimeTarget);
 
         EditorGUILayout.PropertyField(AutoStartTarget);
 
-        if (!myTarget.autoStart && InteractTarget != null)
+        if (!((PopDialogue)target).autoStart && InteractTarget != null)
         {
             EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(InteractTarget);
             EditorGUI.indentLevel--;
         }
 
+        ShowExitCondition();
+
         EditorGUILayout.PropertyField(LinkTarget);
-        if (myTarget.linkNarrative)
+        if (((PopDialogue)target).linkNarrative)
         {
             EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(DialogueIDTarget);
@@ -50,19 +64,29 @@ public class PopDialogue_Editor : Editor
         }
 
         if(TextTarget != null)
-            EditorGUILayout.PropertyField(TextTarget);
+            EditorGUILayout.PropertyField(TextTarget, true);
 
         if (GUILayout.Button("Populate Narrative"))
         {
-            GameObject narrativeObject = GameObject.FindGameObjectWithTag("Narrative");
-            NarrativeStorage sceneStorage = narrativeObject.GetComponent<NarrativeStorage>();
-            sceneStorage.Initialize();
-            myTarget.PullNarrativePages(sceneStorage);
-            myTarget.SyncByInspector();
-            EditorUtility.SetDirty(target);
+            OnPopulateNarrative();
         }
         
         GetTarget.ApplyModifiedProperties();
+    }
+
+    protected virtual void ShowExitCondition()
+    {
+        //not used for pop dialogue, but is used in ChoiceDialogue
+    }
+
+    protected virtual void OnPopulateNarrative()
+    {
+        GameObject narrativeObject = GameObject.FindGameObjectWithTag("Narrative");
+        NarrativeStorage sceneStorage = narrativeObject.GetComponent<NarrativeStorage>();
+        sceneStorage.Initialize();
+        ((PopDialogue)target).PullNarrativePages(sceneStorage);
+        ((PopDialogue)target).SyncByInspector();
+        EditorUtility.SetDirty(target);
     }
 
     

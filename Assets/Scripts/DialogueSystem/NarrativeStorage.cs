@@ -52,53 +52,22 @@ public class NarrativeStorage : MonoBehaviour {
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
+
         BuildNarrative_OrphanageScene();
+
+        BuildNarrative_OrphanageScene_Examples();
     }
 
-    void BuildNarrative_OrphanageScene()
+    void BuildNarrative_OrphanageScene_Examples()
     {
-        StoryBook nextBook = new StoryBook("Orphanage Scene");
+        //Example narrative for SCC choice conversation
+        StoryBook nextBook = new StoryBook("Orphanage Scene_Examples");
         {
-            //Snoring Cubie conversation
-            {
-                StoryChapter nextChapter = NewChapter(100); //Snoring Cubie
-                {
-                    nextChapter.pages.Add(NewPage("zzzzzZZZZZ... ", 2.0f));
-                    nextChapter.pages.Add(NewPage("Stay away... no... salad", 2.0f));
-					nextChapter.pages.Add(NewPage("Can't help it... allergic...", 2.0f));
-                }
-                nextBook.chapters.Add(nextChapter);
-
-				nextChapter = NewChapter(101); //Boxii response
-                {
-                    nextChapter.pages.Add(NewPage("He must be dreaming about dinner earlier.", 3.0f));
-					//nextChapter.pages.Add(NewPage("Maybe not.", 2.0f));
-                }
-                nextBook.chapters.Add(nextChapter);
-            }
-
-			//Crying Cubie conversation
-			{
-				StoryChapter nextChapter = NewChapter(200); //Crying Cubie
-				{
-					nextChapter.pages.Add(NewPage("Boo hoo. Boo hoo hoo.", 3.0f));
-				}
-				nextBook.chapters.Add(nextChapter);
-
-				nextChapter = NewChapter(201); //Boxii response
-				{
-					nextChapter.pages.Add(NewPage("What's the matter?", 3.0f));
-				}
-				nextBook.chapters.Add(nextChapter);
-			}
-
-            //Example narrative for SCC choice conversation
-
             //Softly Crying Cubie conversation w/ choice
             {
                 StoryChapter nextChapter = NewChapter(1005); //Softly Crying Cubie
                 {
-                    nextChapter.pages.Add(NewPage("boo hoo hoo", 2.0f));
+                    nextChapter.pages.Add(NewPage("Boo hoo. Boo hoo hoo.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -183,7 +152,7 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(1101); //Softly Crying Cubie
                 {
-                    nextChapter.pages.Add(NewPage("boo hoo hoo", 2.0f));
+                    nextChapter.pages.Add(NewPage("Boo hoo. Boo hoo hoo.", 3.0f));
                     nextChapter.pages.Add(NewPage("", 2.0f));
                     nextChapter.pages.Add(NewPage("Oh, don't mind me. I just can't sleep.", 3.0f));
                     nextChapter.pages.Add(NewPage("", 3.5f));
@@ -192,7 +161,7 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(1102); //Boxii response
                 {
-                    nextChapter.pages.Add(NewPage("", 2.0f));
+                    nextChapter.pages.Add(NewPage("", 3.0f));
                     nextChapter.pages.Add(NewPage("What's the matter?", 2.0f));
                     nextChapter.pages.Add(NewPage("", 3.0f));
                     nextChapter.pages.Add(NewPage("Is it because you had that dream where you were...", 3.5f));
@@ -245,6 +214,47 @@ public class NarrativeStorage : MonoBehaviour {
                 nextBook.chapters.Add(nextChapter);
 
             }
+        }
+        //add the book to the narrative
+        allNarratives.Add(nextBook);
+    }
+
+    void BuildNarrative_OrphanageScene()
+    {
+        StoryBook nextBook = new StoryBook("Orphanage Scene");
+        {
+            //Snoring Cubie conversation
+            {
+                StoryChapter nextChapter = NewChapter(100); //Snoring Cubie
+                {
+                    nextChapter.pages.Add(NewPage("zzzzzZZZZZ... ", 2.0f));
+                    nextChapter.pages.Add(NewPage("Stay away... no... salad", 2.0f));
+					nextChapter.pages.Add(NewPage("Can't help it... allergic...", 2.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+				nextChapter = NewChapter(101); //Boxii response
+                {
+                    nextChapter.pages.Add(NewPage("He must be dreaming about dinner earlier.", 3.0f));
+					//nextChapter.pages.Add(NewPage("Maybe not.", 2.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+
+			//Crying Cubie conversation
+			{
+				StoryChapter nextChapter = NewChapter(200); //Crying Cubie
+				{
+					nextChapter.pages.Add(NewPage("Boo hoo. Boo hoo hoo.", 3.0f));
+				}
+				nextBook.chapters.Add(nextChapter);
+
+				nextChapter = NewChapter(201); //Boxii response
+				{
+					nextChapter.pages.Add(NewPage("What's the matter?", 3.0f));
+				}
+				nextBook.chapters.Add(nextChapter);
+			}
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
