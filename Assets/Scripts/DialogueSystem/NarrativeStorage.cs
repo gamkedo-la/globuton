@@ -240,21 +240,36 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
-
-			//Crying Cubie conversation
+     //***OBJECT POP-UPS***
+        //**DORMITORY**
+			//*Loud Speakers
 			{
-				StoryChapter nextChapter = NewChapter(200); //Crying Cubie
+				StoryChapter nextChapter = NewChapter(200); //Boxii Comment 1
 				{
-					nextChapter.pages.Add(NewPage("Boo hoo. Boo hoo hoo.", 3.0f));
+					nextChapter.pages.Add(NewPage("Ms. Mahble delivers daily words of encouragement through these.", 4.0f));
 				}
 				nextBook.chapters.Add(nextChapter);
 
-				nextChapter = NewChapter(201); //Boxii response
-				{
-					nextChapter.pages.Add(NewPage("What's the matter?", 3.0f));
+				nextChapter = NewChapter(201); //Boxii Comment 2
+                {
+					nextChapter.pages.Add(NewPage("Things like, “A good cubie is an obedient cubie.”", 4.0f));
 				}
 				nextBook.chapters.Add(nextChapter);
 			}
+            //*Food
+            {
+                StoryChapter nextChapter = NewChapter(202); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("Spheres claim that this is food, but I doubt they’ve tried it.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(203); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("Flies sure seem to like it, though.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
