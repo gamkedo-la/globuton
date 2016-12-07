@@ -270,6 +270,22 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
+            //*Tissue Box
+            {
+                StoryChapter nextChapter = NewChapter(204); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("The box reads, ‘At Osnosis, we pride ourselves on a 99.98% absorption rate of most nasal afflictions.", 5.0f));
+                }
+                nextBook.chapters.Add(nextChapter);            
+            }
+            //*Food Trays
+            {
+                StoryChapter nextChapter = NewChapter(205); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("If Ms. Mahble can’t see her reflection in these, you’re going to get a timeout.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
