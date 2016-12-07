@@ -286,6 +286,20 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
+            //*Food Chute
+            {
+                StoryChapter nextChapter = NewChapter(206); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("This dispenses three square meals a day.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(207); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("Cold air is coming out of the opening.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
