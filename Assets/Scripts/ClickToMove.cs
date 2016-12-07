@@ -42,23 +42,26 @@ public class ClickToMove : MonoBehaviour {
        
         if (interactObject != null)
         {
-            GiveObject goScript = interactObject.GetComponent<GiveObject>();
-            if (goScript != null)
-            {
-                inventory.GiveItem((int)goScript.whichItem);
-                Destroy(goScript.gameObject);
-            }
-            else if (interactObject.tag == "Object")
+            if (interactObject.tag == "Object")
             {
                 Debug.Log("You clicked on it");
                 //check if it has a dialogue spawner, if so, call it's OnClick
                 DialogueSpawner showNarrative = interactObject.GetComponent<DialogueSpawner>();
                 if (showNarrative != null)
                 {
+                    Debug.Log("Calling dialogue spawner.");
                     //has a dialogue spawner
                     showNarrative.OnClick();
                 }
-            }   
+            }
+
+            GiveObject goScript = interactObject.GetComponent<GiveObject>();
+            if (goScript != null)
+            {
+                inventory.GiveItem((int)goScript.whichItem);
+                Destroy(goScript.gameObject);
+            }
+             
         }
     }
 
