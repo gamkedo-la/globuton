@@ -276,11 +276,17 @@ public class NarrativeStorage : MonoBehaviour {
                 {
                     nextChapter.pages.Add(NewPage("The box reads, ‘At Osnosis, we pride ourselves on a 99.98% absorption rate of most nasal afflictions.", 5.0f));
                 }
-                nextBook.chapters.Add(nextChapter);            
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(205); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("This could be handy. I'll just borrow it for a bit.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
             }
             //*Food Trays
             {
-                StoryChapter nextChapter = NewChapter(205); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(206); //Boxii Comment 1
                 {
                     nextChapter.pages.Add(NewPage("If Ms. Mahble can’t see her reflection in these, you’re going to get a timeout.", 4.0f));
                 }
@@ -288,15 +294,15 @@ public class NarrativeStorage : MonoBehaviour {
             }
             //*Food Chute
             {
-                StoryChapter nextChapter = NewChapter(206); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(207); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("This dispenses three square meals a day.", 3.0f));
+                    nextChapter.pages.Add(NewPage("This dispenses three square meals a day.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
-                nextChapter = NewChapter(207); //Boxii Comment 2
+                nextChapter = NewChapter(208); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("Cold air is coming out of the opening.", 3.0f));
+                    nextChapter.pages.Add(NewPage("Cold air is coming out of the opening.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
