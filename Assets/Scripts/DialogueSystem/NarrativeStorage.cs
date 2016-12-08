@@ -306,6 +306,62 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
+            //*Pepper Shaker
+            {
+                StoryChapter nextChapter = NewChapter(209); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(210); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Cubie Toys
+            {
+                StoryChapter nextChapter = NewChapter(211); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(212); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Orphanage Main Doors
+            {
+                StoryChapter nextChapter = NewChapter(213); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("Locked. After twelve years you’d think I’d have learned by now.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(214); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("Eh...maybe tomorrow.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Food Chute Mixer
+            {
+                StoryChapter nextChapter = NewChapter(215); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(216); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
         }
         //add the book to the narrative
         allNarratives.Add(nextBook);
