@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ClickToMove : MonoBehaviour {
 
-	private NavMeshAgent navMeshAgent;
+	private UnityEngine.AI.NavMeshAgent navMeshAgent;
 	private int clickMask;
 	private ObjectHighlight mousedOverCurrently = null;
 	private InventorySystem inventory;
@@ -15,7 +15,7 @@ public class ClickToMove : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		clickMask = ~LayerMask.GetMask ("Camera Trigger");
-		navMeshAgent = GetComponent<NavMeshAgent>();
+		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		inventory = GetComponent<InventorySystem>();
         moveToInteract = false;
     }
