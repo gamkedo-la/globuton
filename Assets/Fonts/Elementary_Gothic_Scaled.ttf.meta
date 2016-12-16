@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2a18d3d9f97fb3146912c5d304655e7f
+timeCreated: 1481850019
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - 'Elementary Gothic Scaled '
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2201781c52d5e394596fe72200536590, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
