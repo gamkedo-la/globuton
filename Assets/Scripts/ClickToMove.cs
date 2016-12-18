@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class ClickToMove : MonoBehaviour {
@@ -86,9 +87,25 @@ public class ClickToMove : MonoBehaviour {
 	void Update () {
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-        
-		if (Physics.Raycast (ray, out hit, 100, clickMask)) {	
+
+		if(EventSystem.current.IsPointerOverGameObject()) {
+			// Debug.Log("Raycast blocked by clicking on UI element");
+			return;
+		}
+
+		if (Physics.Raycast (ray, out hit, 100, clickMask)) {
+			UseItemOnThis uiotScript = hit.collider.GetComponent<UseItemOnThis>();
+
 			if (Input.GetMouseButtonUp (0)) {
+
+				if(uiotScript != null) {
+					if(inventory.ItemIsSelected()) {
+						inventory.UseCurrentItemIfAble(uiotScript);
+					} else {
+						Debug.Log("No item selected");
+					}
+					return;
+				}
 
                 //If currently doing move to interact, interupt it early, and stop the coroutine that is polling distance
                 if (moveToInteract)
