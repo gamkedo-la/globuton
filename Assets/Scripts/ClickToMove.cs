@@ -12,7 +12,7 @@ public class ClickToMove : MonoBehaviour {
     private RaycastHit interactHit; //raycast info for object clicked on, but out of range
     private bool moveToInteract = false; //flag to know if we are moving to interact with something
     public float interactRange = 4.5f; //Range at which this object can interact with clicked objects, if out of range, move to it then interact
-
+    
     // Use this for initialization
     void Start () {
 		clickMask = ~LayerMask.GetMask ("Camera Trigger");
@@ -87,8 +87,8 @@ public class ClickToMove : MonoBehaviour {
 	void Update () {
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-
-		if(EventSystem.current.IsPointerOverGameObject()) {
+        
+        if (EventSystem.current.IsPointerOverGameObject()) {
 			// Debug.Log("Raycast blocked by clicking on UI element");
 			return;
 		}
@@ -112,6 +112,14 @@ public class ClickToMove : MonoBehaviour {
                 {
                     moveToInteract = false;
                     StopCoroutine(PollInteractDistance());
+                }
+
+                //Click on a door to teleport player to adjacent room
+                DoorTeleport teleportTo = hit.collider.GetComponent<DoorTeleport>();
+                if (teleportTo != null) {
+                    transform.position = teleportTo.transform.position;
+                    transform.rotation = teleportTo.transform.rotation;
+                    //Debug.Log("I can teleport you");
                 }
 
                 GiveObject goScript = hit.collider.GetComponent<GiveObject>();
