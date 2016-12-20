@@ -2,6 +2,5 @@
 using System.Collections;
 
 public class DoorTeleport : MonoBehaviour {
-	public Transform teleportTo;
-
+    public GameObject teleportDestination;
 }

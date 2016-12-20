@@ -115,10 +115,10 @@ public class ClickToMove : MonoBehaviour {
                 }
 
                 //Click on a door to teleport player to adjacent room
-                DoorTeleport teleportTo = hit.collider.GetComponent<DoorTeleport>();
-                if (teleportTo != null) {
-                    transform.position = teleportTo.transform.position;
-                    transform.rotation = teleportTo.transform.rotation;
+                DoorTeleport teleportFrom = hit.collider.GetComponent<DoorTeleport>();
+                if (teleportFrom != null) {
+                    transform.position = teleportFrom.teleportDestination.transform.position;
+                    transform.rotation = teleportFrom.teleportDestination.transform.rotation;
                     //Debug.Log("I can teleport you");
                 }
 
