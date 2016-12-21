@@ -119,6 +119,8 @@ public class ClickToMove : MonoBehaviour {
                 if (teleportFrom != null) {
                     transform.position = teleportFrom.teleportDestination.transform.position;
                     transform.rotation = teleportFrom.teleportDestination.transform.rotation;
+					navMeshAgent.SetDestination(transform.position);
+					return;
                     //Debug.Log("I can teleport you");
                 }
 
