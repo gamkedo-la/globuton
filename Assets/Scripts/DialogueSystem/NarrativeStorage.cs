@@ -306,34 +306,35 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
-            //*Pepper Shaker
+            //*Food Chute Opening
             {
                 StoryChapter nextChapter = NewChapter(209); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("This dispenses three square meals a day.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(210); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("Cold air is coming out of the opening.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
-            //*Cubie Toys
+            //*Box-in-a-Box toy
             {
                 StoryChapter nextChapter = NewChapter(211); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("It kind of stopped working after it surprised a curious cubie.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(212); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("Ms. Mahble leaves it here as a reminder for what can happen to curious cubies.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
+        //**Hallways**
             //*Orphanage Main Doors
             {
                 StoryChapter nextChapter = NewChapter(213); //Boxii Comment 1
@@ -348,6 +349,21 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
+            //*The Great Eye
+            {
+                StoryChapter nextChapter = NewChapter(219); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("Locked. After twelve years you’d think I’d have learned by now.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(220); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("Eh...maybe tomorrow.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+        //**Kitchen**
             //*Food Chute Mixer
             {
                 StoryChapter nextChapter = NewChapter(215); //Boxii Comment 1
@@ -357,6 +373,20 @@ public class NarrativeStorage : MonoBehaviour {
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(216); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Empty Pepper Shaker
+            {
+                StoryChapter nextChapter = NewChapter(217); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(218); //Boxii Comment 2
                 {
                     nextChapter.pages.Add(NewPage("...", 4.0f));
                 }
