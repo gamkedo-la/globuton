@@ -296,13 +296,7 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(207); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("This dispenses three square meals a day.", 4.0f));
-                }
-                nextBook.chapters.Add(nextChapter);
-
-                nextChapter = NewChapter(208); //Boxii Comment 2
-                {
-                    nextChapter.pages.Add(NewPage("Cold air is coming out of the opening.", 4.0f));
+                    nextChapter.pages.Add(NewPage("This duct runs through most of the orphanage.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
@@ -334,6 +328,14 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
+			//*Cubie Cubbies
+			{
+				StoryChapter nextChapter = NewChapter(221); //Boxii Comment 1
+				{
+					nextChapter.pages.Add(NewPage("We sleep in these.", 3.0f));
+				}
+				nextBook.chapters.Add(nextChapter);
+			}
         //**Hallways**
             //*Orphanage Main Doors
             {
