@@ -355,13 +355,13 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(219); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("Locked. After twelve years you’d think I’d have learned by now.", 4.0f));
+                    nextChapter.pages.Add(NewPage("The One Eye sees and knows all!", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(220); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("Eh...maybe tomorrow.", 4.0f));
+                    nextChapter.pages.Add(NewPage("The Time Out room is back behind it, but I can’t get by if it can still see me.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
