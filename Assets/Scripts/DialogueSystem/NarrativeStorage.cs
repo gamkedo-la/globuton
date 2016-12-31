@@ -260,13 +260,19 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(202); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("Spheres claim that this is food, but I doubt they’ve tried it.", 4.0f));
+                    nextChapter.pages.Add(NewPage("Eating too much of this could cause blindness...", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(203); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("Flies sure seem to like it, though.", 4.0f));
+                    nextChapter.pages.Add(NewPage("Or so I've heard.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(223); //Boxii Comment 3
+                {
+                    nextChapter.pages.Add(NewPage("Ugh...I hope it’s safe to carry.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
@@ -274,7 +280,7 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(204); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("The box reads, ‘At Osnosis, we pride ourselves on a 99.98% absorption rate of most nasal afflictions.", 5.0f));
+                    nextChapter.pages.Add(NewPage("The box reads, ‘At Osnosis, we pride ourselves on a 99.98% absorption rate of most nasal afflictions.’", 5.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -318,7 +324,7 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(211); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("It kind of stopped working after it surprised a curious cubie.", 4.0f));
+                    nextChapter.pages.Add(NewPage("It sort of stopped working after it 'surprised' a curious cubie.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -336,6 +342,14 @@ public class NarrativeStorage : MonoBehaviour {
 				}
 				nextBook.chapters.Add(nextChapter);
 			}
+            //*Serving Utensil
+            {
+                StoryChapter nextChapter = NewChapter(222); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("This week was my turn to shovel this slop onto trays for meal time.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
         //**Hallways**
             //*Orphanage Main Doors
             {
