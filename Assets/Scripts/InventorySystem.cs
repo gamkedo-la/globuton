@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class InventorySystem : MonoBehaviour {
 
-	public enum Item{pepperShaker, tissues, food, item1, item2};
+	public enum Item{pepperShaker, tissues, food, keyCode, toyBlock};
 	private bool[] hasItem = new bool[5];
 	public Image[] UIicons;
 
