@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class InventorySystem : MonoBehaviour {
 
-	public enum Item{pepperShaker, tissues, food, keyCode, toyBlock};
+	public enum Item{tissues, food, toyBlock, keyCode, pepperShaker};
 	private bool[] hasItem = new bool[5];
 	public Image[] UIicons;
 
@@ -23,10 +23,6 @@ public class InventorySystem : MonoBehaviour {
 		for (int i = 0; i < hasItem.Length; i++) {
 			hasItem[i] = false;
 
-			if(i != (int)Item.tissues) { // copying sprite shaker onto other ones
-				UIicons[i].sprite = UIicons[(int)(Item.pepperShaker)].sprite;
-			}
-
 			UIicons[i].color = Color.clear;
 			Button eachButton = UIicons[i].GetComponent<Button>();
 			ColorBlock cbSet = eachButton.colors;
@@ -40,6 +36,7 @@ public class InventorySystem : MonoBehaviour {
 			inventoryRoot.transform.localPosition;
 		for (int i = 0; i < hasItem.Length; i++) {
 			selectors[i] = copiedGOSet.transform.GetChild(i).GetComponent<Image>();
+			selectors[i].preserveAspect = false;
 			selectors[i].sprite = Resources.Load<Sprite>("itemHighlight");
 		}
 		ClearSelection();
