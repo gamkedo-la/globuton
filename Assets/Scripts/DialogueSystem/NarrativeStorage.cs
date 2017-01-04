@@ -412,7 +412,7 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(217); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("It's no good to me empty.", 3.0f));
+                    nextChapter.pages.Add(NewPage("Someone REALLY likes pepper.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
@@ -420,15 +420,7 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(218); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("...", 3.0f));
-                }
-                nextBook.chapters.Add(nextChapter);
-            }
-            //*???????????????????????????
-            {
-                StoryChapter nextChapter = NewChapter(223); //Boxii Comment 1
-                {
-                    nextChapter.pages.Add(NewPage("...", 3.0f));
+                    nextChapter.pages.Add(NewPage(".", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
@@ -452,22 +444,34 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(228); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("Now who would go and throw away a perfectly good set of blocks?", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(231); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("It would be a crime to just leave them here.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
         //**Storage Room**
             //*Pepper Shaker
             {
-                StoryChapter nextChapter = NewChapter(229); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(232); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("This one is still full.", 3.0f));
+                    nextChapter.pages.Add(NewPage("The label reads, “Rich in vitamins, minerals, and anti-oxidants...”", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
-                nextChapter = NewChapter(230); //Boxii Comment 2
+                nextChapter = NewChapter(233); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("”Warning! Excessive use may induce violent sneezing and other allergic reactions.”", 5.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(234); //Boxii Comment 3
+                {
+                    nextChapter.pages.Add(NewPage("The warnings continue, but I’m sure I’ll be fine.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
