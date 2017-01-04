@@ -379,7 +379,21 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
-        //**Kitchen**
+            //*Super Secret Code
+            {
+                StoryChapter nextChapter = NewChapter(225); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("Wow...", 2.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(226); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("Doesn’t get much more secure than this.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+         //**Kitchen**
             //*Food Chute Mixer
             {
                 StoryChapter nextChapter = NewChapter(215); //Boxii Comment 1
@@ -398,11 +412,60 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(217); //Boxii Comment 1
                 {
+                    nextChapter.pages.Add(NewPage("It's no good to me empty.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Pepper Flakes
+            {
+                StoryChapter nextChapter = NewChapter(218); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Food Mixer
+            {
+                StoryChapter nextChapter = NewChapter(219); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Keypad
+            {
+                StoryChapter nextChapter = NewChapter(220); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("I need the super secret code to unlock the door.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Trash can
+            {
+                StoryChapter nextChapter = NewChapter(221); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("I hope I don’t have to dig too long...", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Toy Blocks
+            {
+                StoryChapter nextChapter = NewChapter(222); //Boxii Comment 1
+                {
                     nextChapter.pages.Add(NewPage("...", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
+            }
+        //**Storage Room**
+            //*Pepper Shaker
+            {
+                StoryChapter nextChapter = NewChapter(223); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("This one is still full.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
 
-                nextChapter = NewChapter(218); //Boxii Comment 2
+                nextChapter = NewChapter(224); //Boxii Comment 2
                 {
                     nextChapter.pages.Add(NewPage("...", 4.0f));
                 }
