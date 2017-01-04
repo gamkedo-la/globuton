@@ -398,13 +398,13 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(215); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("Put your favorite seasonings into the tube to enhance our meals.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(216); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("...", 4.0f));
+                    nextChapter.pages.Add(NewPage("All of the spices in Globuton couldn't save this food.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
@@ -424,9 +424,9 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
             }
-            //*Food Mixer
+            //*???????????????????????????
             {
-                StoryChapter nextChapter = NewChapter(219); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(223); //Boxii Comment 1
                 {
                     nextChapter.pages.Add(NewPage("...", 3.0f));
                 }
@@ -434,7 +434,7 @@ public class NarrativeStorage : MonoBehaviour {
             }
             //*Keypad
             {
-                StoryChapter nextChapter = NewChapter(220); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(224); //Boxii Comment 1
                 {
                     nextChapter.pages.Add(NewPage("I need the super secret code to unlock the door.", 4.0f));
                 }
@@ -442,7 +442,7 @@ public class NarrativeStorage : MonoBehaviour {
             }
             //*Trash can
             {
-                StoryChapter nextChapter = NewChapter(221); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(227); //Boxii Comment 1
                 {
                     nextChapter.pages.Add(NewPage("I hope I don’t have to dig too long...", 4.0f));
                 }
@@ -450,7 +450,7 @@ public class NarrativeStorage : MonoBehaviour {
             }
             //*Toy Blocks
             {
-                StoryChapter nextChapter = NewChapter(222); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(228); //Boxii Comment 1
                 {
                     nextChapter.pages.Add(NewPage("...", 4.0f));
                 }
@@ -459,13 +459,13 @@ public class NarrativeStorage : MonoBehaviour {
         //**Storage Room**
             //*Pepper Shaker
             {
-                StoryChapter nextChapter = NewChapter(223); //Boxii Comment 1
+                StoryChapter nextChapter = NewChapter(229); //Boxii Comment 1
                 {
                     nextChapter.pages.Add(NewPage("This one is still full.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
-                nextChapter = NewChapter(224); //Boxii Comment 2
+                nextChapter = NewChapter(230); //Boxii Comment 2
                 {
                     nextChapter.pages.Add(NewPage("...", 4.0f));
                 }
