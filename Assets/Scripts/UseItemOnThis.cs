@@ -6,7 +6,7 @@ public class UseItemOnThis : MonoBehaviour {
 	public GameObject callsFunctionOnGO;
 	public string functionNameToCall;
 
-	bool hasAlreadyActed = false;
+	public bool hasAlreadyActed = false;
 
 	public bool MatchesItemNeeded( int selectedItemUsed ) {
 		if(hasAlreadyActed == false) {

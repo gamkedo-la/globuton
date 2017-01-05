@@ -99,12 +99,19 @@ public class ClickToMove : MonoBehaviour {
 			if (Input.GetMouseButtonUp (0)) {
 
 				if(uiotScript != null) {
+                    if (uiotScript.hasAlreadyActed)
+                    {
+                        Debug.Log("Already got the item it needs");
+                        return;
+                    }
 					if(inventory.ItemIsSelected()) {
-						inventory.UseCurrentItemIfAble(uiotScript);
+                        if (inventory.UseCurrentItemIfAble(uiotScript)) {
+                            return;
+                        }
 					} else {
 						Debug.Log("No item selected");
 					}
-					return;
+					//return;
 				}
 
                 //If currently doing move to interact, interupt it early, and stop the coroutine that is polling distance
