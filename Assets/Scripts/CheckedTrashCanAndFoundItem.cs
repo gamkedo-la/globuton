@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StorageUnlockAndOpen : MonoBehaviour {
-    private bool hasOpenedYet = false;
-    public Transform slideTo;
+public class CheckedTrashCanAndFoundItem : MonoBehaviour {
+    private bool hasCheckedYet = false;
+    public Transform moveTo;
 
-    public void openNow(){
-        if (hasOpenedYet == false){
-            Debug.Log("Play 'door slide' sound now");
-            transform.position = slideTo.position;
-            hasOpenedYet = true;
+    public void checkNow(){
+        if (hasCheckedYet == false){
+            Debug.Log("Play a sound now");
+            transform.position = moveTo.position;
+            hasCheckedYet = true;
         }
     }
 }
