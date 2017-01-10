@@ -79,7 +79,7 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(1007); //Softly crying cubie response to ^
                 {
-                    nextChapter.pages.Add(NewPage("Oh, don't mind me. I just can't sleep.", 3.0f));
+                    nextChapter.pages.Add(NewPage("Oh, don't mind me, Boxii. I just can't sleep.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -99,19 +99,19 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(1016); //Boxii choices text1
                 {
-                    nextChapter.pages.Add(NewPage("...trying in vain to escape the clutches of horrible, grotesque monsters?", 3.5f)); //1
+                    nextChapter.pages.Add(NewPage("Trying in vain to escape the clutches of horrible, grotesque monsters?", 3.5f)); //1
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(1017); //Boxii choices text2
                 {
-                    nextChapter.pages.Add(NewPage("...falling and falling until the ground opened up and swallowed you whole?", 3.5f));//2
+                    nextChapter.pages.Add(NewPage("Falling and falling until the ground opened up and swallowed you whole?", 3.5f));//2
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(1018); //Boxii choices text3
                 {
-                    nextChapter.pages.Add(NewPage("...walking around all day with a piece of food stuck between your teeth?", 3.5f));  //3
+                    nextChapter.pages.Add(NewPage("Walking around all day with a piece of food stuck between your teeth?", 3.5f));  //3
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -146,6 +146,112 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
 
+            }
+
+            //Snoring Cubie conversation w/ choice
+            {
+                StoryChapter nextChapter = NewChapter(2001); //Snoring Cubie
+                {
+                    nextChapter.pages.Add(NewPage("ZZZ-Zzzz-ZZzzz-hngGGggh-Mmppfft-zZZzzzZZ...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2002); //Boxii response
+                {
+                    nextChapter.pages.Add(NewPage("Uh, I’m going to need you to repeat that.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2003); //Snoring Cubie response to ^
+                {
+                    nextChapter.pages.Add(NewPage("ZZZ-Zzzz-had-zZZzz-enough-zZZzzzZZ...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+                                
+                nextChapter = NewChapter(2004); //Boxii choices text
+                {
+                    nextChapter.pages.Add(NewPage("Did you sneak some of the Sphere's food again?", 4.0f)); //1
+                    nextChapter.pages.Add(NewPage("Is someone picking on you again?", 4.0f));//2
+                    nextChapter.pages.Add(NewPage("I've had about enough of the rancid air coming from the food chute.", 4.5f));  //3
+                    nextChapter.pages.Add(NewPage("You're not already tired of my questions, are you?", 4.0f));  //4
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2005); //Boxii choices text1
+                {
+                    nextChapter.pages.Add(NewPage("Did you sneak some of the Sphere's food again?", 3.5f)); //1
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2006); //Boxii choices text2
+                {
+                    nextChapter.pages.Add(NewPage("Is someone picking on you again?", 3.5f));//2
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2007); //Boxii choices text3
+                {
+                    nextChapter.pages.Add(NewPage("I've had about enough of the rancid air coming from the food chute.", 4.5f));  //3
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2008); //Boxii choices text4
+                {
+                    nextChapter.pages.Add(NewPage("You're not already tired of my questions, are you?", 3.5f));  //3
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2009); //Snoring Cubie choice responses 1
+                {
+                    nextChapter.pages.Add(NewPage("ZZZ-itchy-un-zZZz-controllable-zZZzzzZZ...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2010); //Snoring Cubie choice responses 2
+                {
+                    nextChapter.pages.Add(NewPage("ZZZ-Zzzz-ZZzzz-time-out-zZZzzzZZ...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2011); //Snoring Cubie choice responses 3
+                {
+                    nextChapter.pages.Add(NewPage("ZZZ-Zzzz-trroOOvff-Mmppfft-ZZzzz-zZZzzzZZ...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2012); //Snoring Cubie choice responses 4
+                {
+                    nextChapter.pages.Add(NewPage("ZZZ-Zzzz-ZZzzz-nngGGggh-SSHhnno-zZZzzzZZ...", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2013); //Boxii replies to Snoring Cubie 1
+                {
+                    nextChapter.pages.Add(NewPage("I tried to warn you.", 2.0f));
+                    nextChapter.pages.Add(NewPage("You never know what they may add to the food here.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2014); //Boxii replies to Snoring Cubie 2
+                {
+                    nextChapter.pages.Add(NewPage("Those Galena brothers are never up to any good.", 4.0f));
+                    nextChapter.pages.Add(NewPage("I'll bet one of them got a timeout.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2015); //Boxii replies to Snoring Cubie 3
+                {
+                    nextChapter.pages.Add(NewPage("My nose would've fallen off by now if I had to sleep here.", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(2016); //Boxii replies to Snoring Cubie 4
+                {
+                    nextChapter.pages.Add(NewPage("Whoa, take it easy.", 2.5f));
+                    nextChapter.pages.Add(NewPage("I'm just rying to get to the bottom of this.", 3.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+                             
             }
 
             //Softly Crying Cubie conversation w/ choice example 2
@@ -236,7 +342,7 @@ public class NarrativeStorage : MonoBehaviour {
 				nextChapter = NewChapter(101); //Boxii response
                 {
                     nextChapter.pages.Add(NewPage("He must be dreaming about dinner earlier.", 3.0f));
-					//nextChapter.pages.Add(NewPage("Maybe not.", 2.0f));
+					nextChapter.pages.Add(NewPage("Maybe not.", 2.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
