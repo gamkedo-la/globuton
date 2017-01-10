@@ -254,6 +254,147 @@ public class NarrativeStorage : MonoBehaviour {
                              
             }
 
+            //Timeout Cubie conversation w/ choice
+            {
+                StoryChapter nextChapter = NewChapter(3001); //Timeout Cubie intro1
+                {
+                    nextChapter.pages.Add(NewPage("Psst...", 1.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3002); //Timeout Cubie intro2
+                {
+                    nextChapter.pages.Add(NewPage("PSST...", 1.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3003); //Boxii intro response1
+                {
+                    nextChapter.pages.Add(NewPage("Someone there?", 2.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3004); //Timeout Cubie response1
+                {
+                    nextChapter.pages.Add(NewPage("Down here, ya slab!", 2.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3005); //Boxii intro response2
+                {
+                    nextChapter.pages.Add(NewPage("There's no need for name-calling.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3006); //Timeout Cubie response2
+                {
+                    nextChapter.pages.Add(NewPage("Quiet!", 1.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3007); //Timeout Cubie response3
+                {
+                    nextChapter.pages.Add(NewPage("Now listen up...", 2.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3008); //Timeout Cubie response4
+                {
+                    nextChapter.pages.Add(NewPage("I've got a proposition for ya.", 2.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3009); //Boxii choices text
+                {
+                    nextChapter.pages.Add(NewPage("What do you propose?", 4.0f)); //1
+                    nextChapter.pages.Add(NewPage("Is there something in it for me?", 4.0f));//2
+                    nextChapter.pages.Add(NewPage("How'd you wind up in there anyway?", 4.0f));  //3
+                    nextChapter.pages.Add(NewPage("I don't know if I'm proposition material.", 4.0f));  //4
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3010); //Boxii choices text1
+                {
+                    nextChapter.pages.Add(NewPage("What do you propose?", 2.5f)); //1
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3011); //Boxii choices text2
+                {
+                    nextChapter.pages.Add(NewPage("Is there something in it for me?", 3.0f));//2
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3012); //Boxii choices text3
+                {
+                    nextChapter.pages.Add(NewPage("How'd you wind up in there anyway?", 3.0f));  //3
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3013); //Boxii choices text4
+                {
+                    nextChapter.pages.Add(NewPage("I don't know if I'm proposition material.", 3.0f));  //3
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3014); //Timeout Cubie choice responses 1
+                {
+                    nextChapter.pages.Add(NewPage("", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3015); //Timeout Cubie choice responses 2
+                {
+                    nextChapter.pages.Add(NewPage(".", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3016); //Timeout Cubie choice responses 3
+                {
+                    nextChapter.pages.Add(NewPage("We was startin' to--", 2.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3017); //Timeout Cubie choice responses 4
+                {
+                    nextChapter.pages.Add(NewPage("You made it past the Great Eye, didn’t ya?", 3.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3018); //Boxii replies to Timeout Cubie 1
+                {
+                    nextChapter.pages.Add(NewPage(".", 2.0f));
+                    nextChapter.pages.Add(NewPage(".", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3019); //Boxii replies to Timeout Cubie 2
+                {
+                    nextChapter.pages.Add(NewPage(".", 4.0f));
+                    nextChapter.pages.Add(NewPage(".", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3020); //Boxii replies to Timeout Cubie 3
+                {
+                    nextChapter.pages.Add(NewPage("We?", 1.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3021); //Boxii replies to Timeout Cubie 4
+                {
+                    nextChapter.pages.Add(NewPage("That was purely blind luck.", 2.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3022); //Timeout Cubie replies to Boxii 3
+                {
+                    nextChapter.pages.Add(NewPage("I didn't say nothin'.", 2.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+            }
+
             //Softly Crying Cubie conversation w/ choice example 2
             {
                 StoryChapter nextChapter = NewChapter(1101); //Softly Crying Cubie
