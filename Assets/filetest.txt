@@ -1,1 +1,2 @@
-Testing adding a file
+Testing adding a file.
+Here is more text
