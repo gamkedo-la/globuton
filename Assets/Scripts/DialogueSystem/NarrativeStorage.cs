@@ -306,10 +306,10 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(3009); //Boxii choices text
                 {
-                    nextChapter.pages.Add(NewPage("What do you propose?", 4.0f)); //1
-                    nextChapter.pages.Add(NewPage("Is there something in it for me?", 4.0f));//2
-                    nextChapter.pages.Add(NewPage("How'd you wind up in there anyway?", 4.0f));  //3
-                    nextChapter.pages.Add(NewPage("I don't know if I'm proposition material.", 4.0f));  //4
+                    nextChapter.pages.Add(NewPage("What do you propose?", 100.0f)); //1
+                    nextChapter.pages.Add(NewPage("Is there something in it for me?", 100.0f));//2
+                    nextChapter.pages.Add(NewPage("How'd you wind up in there anyway?", 100.0f));  //3
+                    nextChapter.pages.Add(NewPage("I don't know if I'm proposition material.", 100.0f));  //4
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -529,19 +529,19 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(202); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("Eating too much of this could cause blindness...", 4.0f));
+                    nextChapter.pages.Add(NewPage("Eating too much of this could cause blindness...", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(203); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("Or so I've heard.", 3.0f));
+                    nextChapter.pages.Add(NewPage("Or so I've heard.", 2.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(223); //Boxii Comment 3
                 {
-                    nextChapter.pages.Add(NewPage("Ugh...I hope it’s safe to carry.", 3.0f));
+                    nextChapter.pages.Add(NewPage("Ugh...I hope it’s safe to carry.", 2.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
