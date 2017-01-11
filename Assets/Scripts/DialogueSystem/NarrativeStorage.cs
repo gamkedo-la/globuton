@@ -339,19 +339,20 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(3014); //Timeout Cubie choice responses 1
                 {
-                    nextChapter.pages.Add(NewPage("", 3.0f));
+                    nextChapter.pages.Add(NewPage("I need some property of mine returned to me.", 3.0f));
+                    nextChapter.pages.Add(NewPage("It got misplaced right before I was thrown in here.", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(3015); //Timeout Cubie choice responses 2
                 {
-                    nextChapter.pages.Add(NewPage(".", 3.0f));
+                    nextChapter.pages.Add(NewPage("You do this one thing for me and I’ll get you access the storage room.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(3016); //Timeout Cubie choice responses 3
                 {
-                    nextChapter.pages.Add(NewPage("We was startin' to--", 2.5f));
+                    nextChapter.pages.Add(NewPage("We was makin’ the exchange and--", 2.5f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -363,15 +364,13 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(3018); //Boxii replies to Timeout Cubie 1
                 {
-                    nextChapter.pages.Add(NewPage(".", 2.0f));
-                    nextChapter.pages.Add(NewPage(".", 3.0f));
+                    nextChapter.pages.Add(NewPage("What exactly am I looking for?", 2.5f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
                 nextChapter = NewChapter(3019); //Boxii replies to Timeout Cubie 2
                 {
-                    nextChapter.pages.Add(NewPage(".", 4.0f));
-                    nextChapter.pages.Add(NewPage(".", 3.0f));
+                    nextChapter.pages.Add(NewPage("What’s in that dusty old room?", 2.5f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -387,12 +386,35 @@ public class NarrativeStorage : MonoBehaviour {
                 }
                 nextBook.chapters.Add(nextChapter);
 
-                nextChapter = NewChapter(3022); //Timeout Cubie replies to Boxii 3
+                nextChapter = NewChapter(3022); //Timeout Cubie replies to Boxii 1
                 {
-                    nextChapter.pages.Add(NewPage("I didn't say nothin'.", 2.5f));
+                    nextChapter.pages.Add(NewPage("It ain’t exactly legal, if you catch my drift.", 3.5f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
+                nextChapter = NewChapter(3023); //Timeout Cubie replies to Boxii 2
+                {
+                    nextChapter.pages.Add(NewPage("I heard Ms. Mahble ain’t just usin’ this orphanage to provide cheap cubie labor.", 4.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3024); //Timeout Cubie replies to Boxii 3
+                {
+                    nextChapter.pages.Add(NewPage("I didn't say nothin'.", 1.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3025); //Boxii replies to Timeout Cubie--> "It ain't exactly..."
+                {
+                    nextChapter.pages.Add(NewPage("So...", 1.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(3026); //Timeout Cubie replies to Boxii^
+                {
+                    nextChapter.pages.Add(NewPage("Let’s just say they’ll get me through this hard time.", 3.5f));
+                }
+                nextBook.chapters.Add(nextChapter);
             }
 
             //Softly Crying Cubie conversation w/ choice example 2
