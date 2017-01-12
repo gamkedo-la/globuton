@@ -11,7 +11,7 @@ public class ClickToMove : MonoBehaviour {
 	private InventorySystem inventory;
     private RaycastHit interactHit; //raycast info for object clicked on, but out of range
     private bool moveToInteract = false; //flag to know if we are moving to interact with something
-    public float interactRange = 4.5f; //Range at which this object can interact with clicked objects, if out of range, move to it then interact
+    public float interactRange = 6.5f; //Range at which this object can interact with clicked objects, if out of range, move to it then interact
     
     // Use this for initialization
     void Start () {
@@ -33,7 +33,7 @@ public class ClickToMove : MonoBehaviour {
     {
         a.y = 0; //ignoring height distance of objects, remove this if you want to require 3d distance
         b.y = 0; //ignoring height distance of objects, remove this if you want to require 3d distance
-        //Debug.Log(Vector3.Distance(a, b).ToString());
+        Debug.Log(Vector3.Distance(a, b).ToString());
         return Vector3.Distance(a, b) < interactRange;
     }
 

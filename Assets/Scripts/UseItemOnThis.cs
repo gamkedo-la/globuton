@@ -5,13 +5,22 @@ public class UseItemOnThis : MonoBehaviour {
 	public InventorySystem.Item needsItem;
 	public GameObject callsFunctionOnGO;
 	public string functionNameToCall;
-
+    public UseItemOnThis unlock;
+    public bool locked = false;
 	public bool hasAlreadyActed = false;
 
 	public bool MatchesItemNeeded( int selectedItemUsed ) {
+        if (locked)
+        {
+            return false;
+        }
 		if(hasAlreadyActed == false) {
 			if((int)needsItem == selectedItemUsed) {
 				callsFunctionOnGO.SendMessage(functionNameToCall);
+                if(unlock != null)
+                {
+                    unlock.locked = false;
+                }
 				hasAlreadyActed = true;
 				return true;
 			} else {
