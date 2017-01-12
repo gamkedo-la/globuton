@@ -521,7 +521,7 @@ public class NarrativeStorage : MonoBehaviour {
 
 				nextChapter = NewChapter(201); //Boxii Comment 2
                 {
-					nextChapter.pages.Add(NewPage("Things like, “A good cubie is an obedient cubie.”", 4.0f));
+					nextChapter.pages.Add(NewPage("Things like, “A good cubie is a silent cubie.”", 4.0f));
 				}
 				nextBook.chapters.Add(nextChapter);
 			}
@@ -644,7 +644,7 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(220); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("The Time Out room is back behind it, but I can’t get by if it can still see me.", 4.0f));
+                    nextChapter.pages.Add(NewPage("The Eye will see me if I get any closer.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
