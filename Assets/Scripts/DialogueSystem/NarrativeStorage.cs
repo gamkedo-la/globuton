@@ -667,7 +667,7 @@ public class NarrativeStorage : MonoBehaviour {
             {
                 StoryChapter nextChapter = NewChapter(215); //Boxii Comment 1
                 {
-                    nextChapter.pages.Add(NewPage("Put your favorite seasonings into the tube to enhance our meals.", 4.0f));
+                    nextChapter.pages.Add(NewPage("Watch in amazement as your favorite seasonings get sucked up into the mixer.", 4.5f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
@@ -741,6 +741,26 @@ public class NarrativeStorage : MonoBehaviour {
                 nextChapter = NewChapter(234); //Boxii Comment 3
                 {
                     nextChapter.pages.Add(NewPage("The warnings continue, but I’m sure I’ll be fine.", 3.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+            }
+            //*Crates
+            {
+                StoryChapter nextChapter = NewChapter(235); //Boxii Comment 1
+                {
+                    nextChapter.pages.Add(NewPage("", 4.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(236); //Boxii Comment 2
+                {
+                    nextChapter.pages.Add(NewPage("", 5.0f));
+                }
+                nextBook.chapters.Add(nextChapter);
+
+                nextChapter = NewChapter(237); //Boxii Comment 3
+                {
+                    nextChapter.pages.Add(NewPage("", 3.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
