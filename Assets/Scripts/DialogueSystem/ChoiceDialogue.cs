@@ -46,6 +46,7 @@ public class ChoiceDialogue : PopDialogue {
     //Expose the exit event here, to have some way of closing the choice dialogue
     public void EarlyExit()
     {
+        //Debug.Log(UnityEngine.StackTraceUtility.ExtractStackTrace());
         OnDialogue_Exit();
     }
 }

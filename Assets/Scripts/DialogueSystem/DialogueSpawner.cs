@@ -52,8 +52,8 @@ public class DialogueSpawner : MonoBehaviour {
                 nextDialogue.transform.SetParent(parent, false);
 
                 //Dialogue objects that are children auto destroy themselves when the display timer has passed. This leaves the prefab itself as a broken link, empty and cluttering the game until game close. Cleanup? 
-                if (cleanupTime != 0.0f)
-                    Destroy(nextDialogue, cleanupTime);
+                //if (cleanupTime != 0.0f)
+                    //Destroy(nextDialogue, cleanupTime);
             }
             canSpawn = false;
             StartCoroutine(ClickWaitTime());
