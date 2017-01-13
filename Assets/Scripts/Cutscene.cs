@@ -36,7 +36,7 @@ public class Cutscene : MonoBehaviour {
 		for (int i = 0; i < cameraSteps.Length; i++) {
 			Camera.main.transform.position = cameraSteps [i].position;
 			Camera.main.transform.rotation = cameraSteps [i].rotation;
-			yield return new WaitForSeconds (2.0f);
+			yield return new WaitForSeconds (3.0f);
         
 		}
 		EndCutscene();
