@@ -8,6 +8,11 @@ public class Cutscene : MonoBehaviour {
 	public Transform[] cameraSteps;
     public GameObject gameUI;
 
+	public Transform[] boxiiSteps;
+
+	public Transform boxii;
+	public float waitTime = 3.0f;
+
 	public bool isPlaying() {
 		return (midPlaying != null);
 	}
@@ -18,7 +23,7 @@ public class Cutscene : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {			
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space) && boxii==null) {
 			EndCutscene();
 		}
 	}
@@ -39,9 +44,22 @@ public class Cutscene : MonoBehaviour {
 		for (int i = 0; i < cameraSteps.Length; i++) {
 			Camera.main.transform.position = cameraSteps [i].position;
 			Camera.main.transform.rotation = cameraSteps [i].rotation;
-			yield return new WaitForSeconds (3.0f);
+
+			if(i < boxiiSteps.Length) {
+				NavMeshAgent NMA = boxii.GetComponent<NavMeshAgent>();
+				if(NMA) {
+					NMA.enabled = false;
+				}
+				boxii.transform.position = boxiiSteps [i].position;
+				boxii.transform.rotation = boxiiSteps [i].rotation;
+			}
+
+			yield return new WaitForSeconds (waitTime);
         
 		}
-		EndCutscene();
+
+		if(boxii == null) {
+			EndCutscene();
+		}
 	}
 }

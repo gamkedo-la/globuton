@@ -39,6 +39,9 @@ public class CameraGoalChaser : MonoBehaviour {
 		if(cutsceneMain.isActiveAndEnabled && cutsceneMain.isPlaying()) {
 			return;
 		}
+		if(EndingTakeoverCamera.isPlaying) {
+			return;
+		}
 		float interpolate = Time.time - timeWhen;
 		if(interpolate > 1.0f) {
 			interpolate = 1.0f;
