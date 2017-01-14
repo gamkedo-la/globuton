@@ -8,6 +8,9 @@ public class Cutscene : MonoBehaviour {
 	public Transform[] cameraSteps;
     public GameObject gameUI;
 
+	public bool isPlaying() {
+		return (midPlaying != null);
+	}
     void Start()
     {
         midPlaying = playCutscene();
