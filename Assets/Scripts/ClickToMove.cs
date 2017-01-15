@@ -41,7 +41,7 @@ public class ClickToMove : MonoBehaviour {
     {
         a.y = 0; //ignoring height distance of objects, remove this if you want to require 3d distance
         b.y = 0; //ignoring height distance of objects, remove this if you want to require 3d distance
-        Debug.Log(Vector3.Distance(a, b).ToString());
+        //Debug.Log(Vector3.Distance(a, b).ToString());
         return Vector3.Distance(a, b) < interactRange;
     }
 
