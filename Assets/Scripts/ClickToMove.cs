@@ -12,12 +12,20 @@ public class ClickToMove : MonoBehaviour {
     private RaycastHit interactHit; //raycast info for object clicked on, but out of range
     private bool moveToInteract = false; //flag to know if we are moving to interact with something
     public float interactRange = 6.5f; //Range at which this object can interact with clicked objects, if out of range, move to it then interact
+
+    //AudioClips for SFX
+    public AudioClip m_stingPickup;
+    public AudioClip m_doorOpen;
+
+    private AudioSource securityCamSfx;
+
     
     // Use this for initialization
     void Start () {
 		clickMask = ~LayerMask.GetMask ("Camera Trigger");
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		inventory = GetComponent<InventorySystem>();
+        securityCamSfx = GameObject.Find("Security Cam").GetComponent<AudioSource>();
         moveToInteract = false;
     }
 
@@ -61,6 +69,7 @@ public class ClickToMove : MonoBehaviour {
             {
                 inventory.GiveItem((int)goScript.whichItem);
                 Destroy(goScript.gameObject);
+                SoundManager.instance.PlaySingle(m_stingPickup);
             }
              
         }
@@ -127,6 +136,8 @@ public class ClickToMove : MonoBehaviour {
                     transform.position = teleportFrom.teleportDestination.transform.position;
                     transform.rotation = teleportFrom.teleportDestination.transform.rotation;
 					navMeshAgent.SetDestination(transform.position);
+                    SoundManager.instance.PlaySingle(m_doorOpen);
+                    ToggleSecurityCamSfx(teleportFrom);
 					return;
                     //Debug.Log("I can teleport you");
                 }
@@ -168,7 +179,24 @@ public class ClickToMove : MonoBehaviour {
 				}
 			} // end ohNow != mousedOverCurrently 
 		} // end Pyhsics.Raycast check
-	}// end Update
+	}
+
+    private void ToggleSecurityCamSfx(DoorTeleport whichTeleporter)
+    {
+
+        if (whichTeleporter.name == "DormToHall" || whichTeleporter.name == "KitchenToHall")
+        {
+            securityCamSfx.Play();
+            //Debug.Log("Entering Hallway");
+        }
+        else if (whichTeleporter.name == "HallToDorm" || whichTeleporter.name == "HallToKitchen")
+        {
+            securityCamSfx.Stop();
+            //Debug.Log("Exiting Hallway");
+        }
+    }
+    
+    // end Update
 } // end of file
 
 	
