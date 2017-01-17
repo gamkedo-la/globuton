@@ -8,7 +8,8 @@ public class ChangeCameraOnEnter : MonoBehaviour
     private static List<Transform> triggeredCameraAreas = new List<Transform>();
     Transform camPos;
 
-	float interpolate = 0.0f;
+    //Not used, commented out to remove caution message in console - OR
+	//float interpolate = 0.0f;
 
 	void Awake() {
 		if(Camera.main.GetComponent<CameraGoalChaser>() == null) {
