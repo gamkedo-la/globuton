@@ -13,15 +13,14 @@ public class ClickToMove : MonoBehaviour {
     private bool moveToInteract = false; //flag to know if we are moving to interact with something
     public float interactRange = 6.5f; //Range at which this object can interact with clicked objects, if out of range, move to it then interact
 
-    private AudioSource securityCamSfx;
-
+    public SecurityCamera securityCam;
     
     // Use this for initialization
     void Start () {
 		clickMask = ~LayerMask.GetMask ("Camera Trigger");
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		inventory = GetComponent<InventorySystem>();
-        securityCamSfx = GameObject.Find("Security Cam").GetComponent<AudioSource>();
+        securityCam = GameObject.FindGameObjectWithTag("SecurityCamera").GetComponent<SecurityCamera>();
         moveToInteract = false;
     }
 
@@ -179,16 +178,18 @@ public class ClickToMove : MonoBehaviour {
 
     private void ToggleSecurityCamSfx(DoorTeleport whichTeleporter)
     {
-
-        if (whichTeleporter.name == "DormToHall" || whichTeleporter.name == "KitchenToHall")
+        if (securityCam.isOn == true)
         {
-            securityCamSfx.Play();
-            //Debug.Log("Entering Hallway");
-        }
-        else if (whichTeleporter.name == "HallToDorm" || whichTeleporter.name == "HallToKitchen")
-        {
-            securityCamSfx.Stop();
-            //Debug.Log("Exiting Hallway");
+            if (whichTeleporter.name == "DormToHall" || whichTeleporter.name == "KitchenToHall")
+            {
+                SoundManager.instance.m_securityCamSource.Play();
+                //Debug.Log("Entering Hallway");
+            }
+            else if (whichTeleporter.name == "HallToDorm" || whichTeleporter.name == "HallToKitchen")
+            {
+                SoundManager.instance.m_securityCamSource.Stop();
+                //Debug.Log("Exiting Hallway");
+            }
         }
     }
     

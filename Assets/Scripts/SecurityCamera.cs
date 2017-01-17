@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class SecurityCamera : MonoBehaviour {
-    private bool isOn = true;
+    public bool isOn = true;
     public Light redLight;
     public GameObject blockingWall;
 
@@ -21,6 +21,7 @@ public class SecurityCamera : MonoBehaviour {
             redLight.enabled = false;
             Destroy(blockingWall);
             isOn = false;
+            SoundManager.instance.m_securityCamSource.Stop();
             Renderer rend = GetComponent<Renderer>();
             rend.material.SetColor("_EmissionColor",Color.black);
         }
