@@ -82,14 +82,10 @@ public class InventorySystem : MonoBehaviour {
 			UIicons [selectedNow].color = Color.clear;
 			Debug.Log ("Using item " + (Item)selectedNow);
 			ClearSelection();
+            SoundManager.instance.PlaySingle(SoundManager.instance.m_stingPuzzle);
 			return true;
 		}
 		ClearSelection();
 		return false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

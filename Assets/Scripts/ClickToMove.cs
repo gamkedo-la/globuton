@@ -13,10 +13,6 @@ public class ClickToMove : MonoBehaviour {
     private bool moveToInteract = false; //flag to know if we are moving to interact with something
     public float interactRange = 6.5f; //Range at which this object can interact with clicked objects, if out of range, move to it then interact
 
-    //AudioClips for SFX
-    public AudioClip m_stingPickup;
-    public AudioClip m_doorOpen;
-
     private AudioSource securityCamSfx;
 
     
@@ -69,7 +65,7 @@ public class ClickToMove : MonoBehaviour {
             {
                 inventory.GiveItem((int)goScript.whichItem);
                 Destroy(goScript.gameObject);
-                SoundManager.instance.PlaySingle(m_stingPickup);
+                SoundManager.instance.PlaySingle(SoundManager.instance.m_stingPickup);
             }
              
         }
@@ -136,7 +132,7 @@ public class ClickToMove : MonoBehaviour {
                     transform.position = teleportFrom.teleportDestination.transform.position;
                     transform.rotation = teleportFrom.teleportDestination.transform.rotation;
 					navMeshAgent.SetDestination(transform.position);
-                    SoundManager.instance.PlaySingle(m_doorOpen);
+                    SoundManager.instance.PlaySingle(SoundManager.instance.m_doorOpen);
                     ToggleSecurityCamSfx(teleportFrom);
 					return;
                     //Debug.Log("I can teleport you");

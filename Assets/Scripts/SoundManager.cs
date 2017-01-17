@@ -9,6 +9,11 @@ public class SoundManager : MonoBehaviour
     public float m_highPitchRange = 1.05f;
     public static SoundManager instance = null;
 
+    public AudioClip m_stingPuzzle;
+    public AudioClip m_stingPickup;
+    public AudioClip m_doorOpen;
+
+
 
     void Awake()
     {
