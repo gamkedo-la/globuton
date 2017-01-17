@@ -34,6 +34,7 @@ public class Cutscene : MonoBehaviour {
             Camera.main.transform.position = returnToPos;
 			Camera.main.transform.rotation = returnToRot;
 			midPlaying = null;
+            SoundManager.instance.StartMusic(); 
 		}
 	}
 

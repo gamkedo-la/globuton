@@ -7,7 +7,7 @@ public class PlaySoundOnEnter : MonoBehaviour
     void OnTriggerEnter()
     {
         SoundManager.instance.PlaySingle(soundToPlay);
-        Debug.Log("You are at the main door!");
+        Debug.Log("You are at the main door!"); 
     }
 
 }
