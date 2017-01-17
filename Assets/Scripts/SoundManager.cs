@@ -12,7 +12,6 @@ public class SoundManager : MonoBehaviour
     public AudioClip m_stingPickup;
     public AudioClip m_doorOpen;
 
-
     void Awake()
     {
         if (instance == null)
@@ -32,10 +31,8 @@ public class SoundManager : MonoBehaviour
         m_sfxSource.Play();
     }
 
-    public void PlayLoop(AudioClip clip)
+    public void StartMusic()
     {
-        m_sfxSource.loop = true;
-        m_sfxSource.clip = clip;
-        m_sfxSource.Play();
+        m_musicSource.Play();
     }
 }
