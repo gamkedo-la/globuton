@@ -346,7 +346,7 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(3015); //Timeout Cubie choice responses 2
                 {
-                    nextChapter.pages.Add(NewPage("You do this one thing for me and I’ll get you access the storage room.", 4.0f));
+                    nextChapter.pages.Add(NewPage("You do this one thing for me and I’ll get you access to the storage room.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
 
