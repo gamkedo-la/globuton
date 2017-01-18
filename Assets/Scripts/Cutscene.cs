@@ -11,7 +11,7 @@ public class Cutscene : MonoBehaviour {
 	public Transform[] boxiiSteps;
 
 	public Transform boxii;
-	public float waitTime = 3.0f;
+	public float waitTime = 4.0f;
 
 	public bool isPlaying() {
 		return (midPlaying != null);
