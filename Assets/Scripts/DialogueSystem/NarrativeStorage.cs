@@ -599,7 +599,7 @@ public class NarrativeStorage : MonoBehaviour {
 
                 nextChapter = NewChapter(212); //Boxii Comment 2
                 {
-                    nextChapter.pages.Add(NewPage("Ms. Mahble leaves it here as a reminder for what can happen to curious cubies.", 4.0f));
+                    nextChapter.pages.Add(NewPage("Ms. Mahble leaves it here as a reminder of what can happen to curious cubies.", 4.0f));
                 }
                 nextBook.chapters.Add(nextChapter);
             }
