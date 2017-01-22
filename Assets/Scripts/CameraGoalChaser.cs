@@ -10,13 +10,21 @@ public class CameraGoalChaser : MonoBehaviour {
 
 	public static Cutscene cutsceneMain;
 
-	void Awake() {
+	void RefreshCameraHook() {
 		GameObject globalGO = GameObject.Find("Global");
 		cutsceneMain = globalGO.GetComponent<Cutscene>();
 	}
 
+	void Awake() {
+		RefreshCameraHook();
+	}
+
 	// Use this for initialization
 	void Start () {
+		EndingTakeoverCamera.isPlaying = false;
+
+		RefreshCameraHook();
+
 		timeWhen = Time.time;
 
 		wasPos = goalPos = Camera.main.transform.position;

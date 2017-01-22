@@ -5,20 +5,26 @@ using System.Collections.Generic;
 public class ChangeCameraOnEnter : MonoBehaviour
 {
 
-    private static List<Transform> triggeredCameraAreas = new List<Transform>();
+    private static List<Transform> triggeredCameraAreas;
     Transform camPos;
 
     //Not used, commented out to remove caution message in console - OR
 	//float interpolate = 0.0f;
 
-	void Awake() {
+	void RefreshCameraHook() {
 		if(Camera.main.GetComponent<CameraGoalChaser>() == null) {
 			Camera.main.gameObject.AddComponent<CameraGoalChaser>();
 		}
 	}
 
+	void Awake() {
+		RefreshCameraHook();
+	}
+
     void Start()
     {
+		RefreshCameraHook();
+		triggeredCameraAreas = new List<Transform>();
         camPos = transform.GetChild(0);
     }
 	void Update() {

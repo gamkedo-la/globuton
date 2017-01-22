@@ -118,14 +118,12 @@ public class PopDialogue : MonoBehaviour {
         }
         
         transform.GetChild(0).gameObject.SetActive(false);
-        Debug.Log("start");
     }
 
     
 
     protected virtual void Awake()
     {
-        Debug.Log("Awake");
         if (!autoStart && interactData != null && interactData.watchDialogue != null)
         {
             //there is a dialogue here, based on the watchInteract do something
