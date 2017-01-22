@@ -5,7 +5,10 @@ public class UseItemOnThis : MonoBehaviour {
 	public InventorySystem.Item needsItem;
 	public GameObject callsFunctionOnGO;
 	public string functionNameToCall;
-    public UseItemOnThis unlock;
+    
+	public bool alsoDestroySelf = false;
+
+	public UseItemOnThis unlock;
     public bool locked = false;
 	public bool hasAlreadyActed = false;
 
@@ -17,6 +20,9 @@ public class UseItemOnThis : MonoBehaviour {
 		if(hasAlreadyActed == false) {
 			if((int)needsItem == selectedItemUsed) {
 				callsFunctionOnGO.SendMessage(functionNameToCall);
+				if(alsoDestroySelf) {
+					GameObject.Destroy(gameObject);
+				}
                 if(unlock != null)
                 {
                     unlock.locked = false;
