@@ -36,7 +36,7 @@ public class InventorySystem : MonoBehaviour {
 			inventoryRoot.transform.localPosition;
 		for (int i = 0; i < hasItem.Length; i++) {
 			selectors[i] = copiedGOSet.transform.GetChild(i).GetComponent<Image>();
-			selectors[i].preserveAspect = false;
+			selectors[i].preserveAspect = true;
 			selectors[i].sprite = Resources.Load<Sprite>("itemHighlight");
 		}
 		ClearSelection();
